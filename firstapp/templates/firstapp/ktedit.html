@@ -1,0 +1,136 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.01 Transitional//EN" "http://www.w3.org/TR/html5/loose.dtd">
+<html>
+<head>
+  <link href="{% static 'css/newstyle.css' %}" rel="stylesheet" type="text/css" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="header"><img src="{% static 'includes/images/kerala-tourism-title.png' %}">
+ <div id="links">
+ <a href="" style="margin-left:625px">HOME</a>
+ <a href="" style="margin-left:20px">EXPERIENCE KERALA</a>
+ <a href="" style="margin-left:20px">DESTINATIONS</a>
+ <a href="" style="margin-left:20px">TOUR PACKAGES</a>
+ <a href="" style="margin-left:20px">CONTACT NUMBER</a></div>
+</div>
+<div class=""slideshow-container"">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="{% static 'includes/images/Illikkal-kallu.jpg' %}" class="imslide" style="width:100%">
+  <div class="texto">Ilavizhapoochira</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="{% static 'includes/images/munreo-island.jpg' %}" class="imslide" style="width:100%">
+  <div class="texto">Kodikuthimala</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="{% static 'includes/images/beckal.jpg' %}" class="imslide" style="width:100%">
+  <div class="texto">Jew Town</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="between"><b>TOP DESTINATIONS</b></div>
+<div class="rowo">
+  <div class="columno">
+    <img src="{% static 'includes/images/kollukkumallay.jpg' %}" class="image" style="width:99%;height:400px">
+    <div class="overlay">
+    <div class="text">The Neyyar Dam nearby is also famous due to its many features, chief amongst them being a picturesque picnic spot for families, friends and solo-travellers alike.</div></div>
+    <div class="centered">NEYYAR DAM</div></div>
+  <div class="columno">
+    <img src="{% static 'includes/images/Periyar.jpg' %}" class="image" style="width:99%;height:400px">
+    <div class="overlay">
+    <div class="text">Kochi, the commercial capital of Kerala, the last port of Vasco Da Gama, where you will find synagogues, mosques, churches and temples side by side, is a place with a fascinating history. </div></div>
+    <div class="centered">VASCODAGAMA SQUARE</div></div>
+  <div class="columno">
+    <img src="{% static 'includes/images/Pookod-Lake.jpg'%}" class="image" style="width:99%;height:400px">
+    <div class="overlay">
+    <div class="text">Kuruvadweep or Kuruva Island comprises of a cluster of islets over the middle of Kabini River in Wayanad that is popular for the boat rides it offers on specially crafted bamboo rafts.</div></div>
+    <div class="centered">KURUWA DWEEP</div></div></div>
+
+<div class="new"><B>EXPERIENCE KERALA</B></div>
+
+<div class="newsection">
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'includes/images/athirapallywaterfalls.jpg' %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Athirapally Waterfalls</h2>
+        <p>As you walk down the stone slabs that lead to the base of the Athirappalli waterfalls, a mysterious serenity overcomes you. It is Kerala's most famous and largest waterfall at over 80 ft high. The sight of the water crashing onto the ground leaves you with a sense of wonder at the sheer power and magnificence of nature. Located around 63 km from Thrissur district, it is a perennial picnic spot for people in the area and  beyond. Its surrounding greenery is perfect for walks and picnics with loved ones. Lying at the entrance to the Sholayar forest ranges, it is a part of the Chalakudy River which calls the Western Ghats its home.</p>
+        <p><button class="button">Find More Activities</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'includes/images/ilavizhapoochira.jpg' %}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Ilavizhapoochira Highrange</h2>
+        <p>Known as the land of letters, latex and lakes, Kottayam is among the most prominent districts in Kerala. Here lies the beautiful valley of Ilaveezhapoonchira, one amongst the many prime picnicking spots in the area. The beautiful hillocks near Kanjar are known to have great trails for trekking. The view in itself is breath-taking. During the Monsoons, the entire place transforms into a surreal spectacle. The terrain changes and one observes Nature at her best. It is highly recommended to view both sunrise and sunset from the valley as the picturesque landscape opens up in a unique and exhilarating way at those specific times. </p>
+        <p><button class="button">Find More Activities</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'includes/images/boating.jpg' %}" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Vazhavanthol Waterfalls</h2>
+        <p>Starting from Kaanithara, the initial trek, through eucalyptus plantations could be easy at the beginning, but soon the mood changes, the gear shifts, and you would be panting like hell hauling yourself up the incline. Tall trees with their large canopies come as a welcome relief.This 5 km not so hard trekking to Vazhvanthol is an amazing experience. At top, you can see two waterfalls. Trekking through the forest area about 2 km you will reach the first falls. Can take rest here and enjoy the place. Restart your trek to half a kilometer to see the real beauty of Vazhvanthol Falls. A guide will accompany you for this one-day trekking programme. </p>
+        <p><button class="button">Find More Activities</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="footer">
+<p class="footerstyle">Department of Tourism, Government of Kerala, Park View, Thiruvananthapuram, Kerala, India - 695 033
+            E-mail: info@keralatourism.org.</p>
+
+</div>
+</body>
+
+</html>
